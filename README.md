@@ -1,6 +1,6 @@
 # Práctica 1 
 
-##Objetivo del ejercicio
+## Objetivo del ejercicio
 
 Desarrollar una página web en HTML (sin CSS ni JavaScript) sobre el propio
 estudiante o un tema de interés, para practicar la estructura del documento,
