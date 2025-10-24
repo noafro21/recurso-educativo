@@ -4,102 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Recursos Visuales</title>
+    <title>Endoscopia Digestiva Educativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles-dist.css">
     <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <header>
-        <a href="index.html">
-            <img src="./assets/images/logo-endoscopia-educativa.png"
-                title="Logo: Endoscopia Digestiva Educativa - Tu guía clara para entender la endoscopia"
-                alt="Logo: Endoscopia Educativa - Tu guía clara para entender la endoscopia" width="250"> </a>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./gallery.html">Imágenes y Videos</a></li>
+    <header class="header">
+        <div class="container-fluids" >
+            <div class="row">
+                <div class="col-12 col-md-12 col-xl-12">
+                    <a href="index.html">
+                        <img class="logo" src="./assets/images/logo-endoscopia-educativa.png"
+                            title="Logo: Endoscopia Digestiva Educativa - Tu guía clara para entender la endoscopia"
+                            alt="Logo: Endoscopia Educativa - Tu guía clara para entender la endoscopia">
+                    </a>
 
-            </ul>
-        </nav>
-        <h1>Galería de Recursos Visuales</h1>
+                </div>
+
+                <div class="col-12 col-md-12 col-xl-12">
+                <nav class="nav-container">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gallery.html">Imágenes y Videos</a>
+                            </li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
-
     <!--Para esta seccion realicé una busqueda de informacion que me permitiera citar o referecciar los vidos o imagenes de una manera correcta, aplicando las mejores prácticas de desarrollo web]-->
-    <section>
-        <h2>Imagenes</h2>
-        <p>Esta imagen ilustra una gastroscopia (endoscopia digestiva alta) en curso, realizada por un equipo médico en
-            un entorno clínico.</p>
-        <ul>
+    <main class="main">
+        <div class="container-fluids">
+            <div class="row">
 
-            <li><b>Sujetos:</b> Una doctora (vestido con uniforme azul y mascarilla) maneja el endoscopio, mientras una
-                enfermera (con uniforme blanco y mascarilla) asiste en el procedimiento.</li>
+                <h1>Galería de Recursos Visuales </h1>
+                <div class=" col-12 col-md-6 col-xl-4">
+                    <section>
+                        <h2>Imagenes</h2>
 
-            <li><b>Paciente y Posición:</b> Se observa al paciente acostado, probablemente en la posición de decúbito
-                lateral izquierdo (que es la posición recomendada para este tipo de procedimiento).</li>
+                        <figure class="figure">
+                            <img src="./assets/images/gastroscopy.webp" class="figure-img img-fluid rounded"
+                                alt="Doctor y enfermera realizando una gastroscopia en paciente acostado, con monitor mostrando la mucosa gástrica.">
 
-            <li><b>Equipo:</b> En el fondo, un monitor muestra una vista detallada del interior del estómago (la mucosa
-                gástrica), que es la imagen que capta el endoscopio. Esto resalta la tecnología utilizada para el
-                diagnóstico.</li>
+                            <figcaption class="figure-caption text-end">
+                                Imagen con licencia: <a
+                                    href="https://www.shutterstock.com/es/image-photo/doctor-using-fiberoptic-scope-gastroscopy-modern-2518394883"
+                                    target="_blank" rel="noopener noreferrer">Gastroscopia moderna</a> por Zozulinskyi.
+                                Vía
+                                Shutterstock.
+                            </figcaption>
+                        </figure>
+                    </section>
+                </div>
 
-            <li><b>Acción:</b> El médico introduce cuidadosamente el tubo flexible del endoscopio en la boca del
-                paciente para examinar el esófago, el estómago y el duodeno.</li>
+                <div class=" col-12 col-md-6 col-xl-4">
+                    <section>
+                        <h2>Videos</h2>
+                        <figure class="figure">
+                            <video controls width="400" height="300" muted>
+                                <source src="./assets/videos/Viaje_Alucinante.mp4" type="video/mp4">
+                                <source src="videos/tu_video_notebooklm.webm" type="video/webm"> Tu navegador no soporta
+                                la
+                                etiqueta
+                                de
+                                video. Puedes <a href="#">descargar el video aquí</a>.
+                            </video>
 
-        </ul>
-        <figure>
-            <img src="./assets/images/gastroscopy.webp"
-                alt="Doctor y enfermera realizando una gastroscopia en paciente acostado, con monitor mostrando la mucosa gástrica.">
+                            <figcaption class="figure-caption text-end">
+                                Video: "Viaje alucinante" (generado por Inteligencia Artificial con Google NotebookLM).
+                                <br>
+                                Fuentes primarias utilizadas:
+                                <ul>
+                                    <li><a href="https://web.archive.org/web/20130921055149/http://www.cmp.org.pe/documentos/librosLibres/tsmi/Cap22_Endoscopia_gastrointestinal.pdf"
+                                            target="_blank" rel="noopener noreferrer">Endoscopía gastrointestinal</a>
+                                    </li>
+                                </ul>
+                                <br>
+                                Este video es propiedad de tu sitio web &copy; 2025.
+                            </figcaption>
+                        </figure>
+                    </section>
+                </div>
 
-            <figcaption>
-                Imagen con licencia: <a
-                    href="https://www.shutterstock.com/es/image-photo/doctor-using-fiberoptic-scope-gastroscopy-modern-2518394883"
-                    target="_blank" rel="noopener noreferrer">Gastroscopia moderna</a> por Zozulinskyi. Vía
-                Shutterstock.
-            </figcaption>
-        </figure>
-    </section>
-    <section>
-        <h2>Videos</h2>
-        <figure>
-            <video controls width="640" height="360" muted>
-                <source src="./assets/videos/Viaje_Alucinante.mp4" type="video/mp4">
-                <source src="videos/tu_video_notebooklm.webm" type="video/webm"> Tu navegador no soporta la etiqueta de
-                video. Puedes <a href="#">descargar el video aquí</a>.
-            </video>
+                <div class=" col-12 col-md-6 col-xl-4">
+                    <section>
+                        <h2>Audios</h2>
+                        <figure class="figure">
+                            <audio controls>
+                                <source src="./assets/audios/Fascinante_Viaje_de_la_Endoscopia.mp3" type="audio/mpeg">
+                                <source src="#" type="audio/ogg">
+                                Tu navegador no soporta la reproducción de audio. <a href="#">Descarga el audio
+                                    aquí</a>.
+                            </audio>
+                            <figcaption class="figure-caption text-end">
+                                Audio: Del Candelabro a la IA: El Fascinante Viaje de la Endoscopia por Nuestro Cuerpo
+                                <br>
+                                Fecha: 30 de Agosto, 2025.
+                            </figcaption>
+                        </figure>
+                    </section>
+                </div>
 
-            <figcaption>
-                Video: "Viaje alucinante" (generado por Inteligencia Artificial con Google NotebookLM).
-                <br>
-                Fuentes primarias utilizadas:
-                <ul>
-                    <li><a href="https://web.archive.org/web/20130921055149/http://www.cmp.org.pe/documentos/librosLibres/tsmi/Cap22_Endoscopia_gastrointestinal.pdf"
-                            target="_blank" rel="noopener noreferrer">Endoscopía gastrointestinal</a></li>
-                </ul>
-                <br>
-                Este video es propiedad de tu sitio web &copy; 2025.
-            </figcaption>
-        </figure>
-    </section>
-    <section>
-        <h2>Audios</h2>
-        <figure>
-            <audio controls>
-                <source src="./assets/audios/Fascinante_Viaje_de_la_Endoscopia.mp3" type="audio/mpeg">
-                <source src="#" type="audio/ogg">
-                Tu navegador no soporta la reproducción de audio. <a href="#">Descarga el audio aquí</a>.
-            </audio>
-            <figcaption>
-                Audio: Del Candelabro a la IA: El Fascinante Viaje de la Endoscopia por Nuestro Cuerpo
-                <br>
-                Fecha: 30 de Agosto, 2025.
-            </figcaption>
-        </figure>
-    </section>
+            </div>
+        </div>
+    </main>
 
-    <footer id="contacto">
-        <p>&copy; 2025 Endoscopia Educativa. Todos los derechos reservados.</p>
-        <p>Contacto: <a href="noafro:info@gmail.com">noafro:info@gmail.com</a></p>
-    </footer>
+
+    <aside>Te invito a aprender más</aside>
+    <div>
+        <footer class=" footer">
+            <p>&copy; 2025 Endoscopia Educativa. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="noafro:info@gmail.com">noafro:info@gmail.com</a></p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
