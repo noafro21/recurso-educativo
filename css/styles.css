@@ -1,0 +1,70 @@
+/*rgb(24, 28, 20)
+rgb(60, 61, 55)
+rgb(105, 117, 101)
+rgb(236, 223, 204)*/
+
+body {
+    background-color: rgb(105, 117, 101);
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(24, 28, 20);
+    
+}
+
+.header {
+    background-color: rgb(236, 223, 204);
+    height: 70px;
+  
+  position: sticky;
+  top: 0;
+  
+
+
+}
+
+.logo {
+    width: 110px;
+    height: 65px;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 3px;
+    border-radius: 10px;
+    animation: rotar 6s linear 2 alternate;
+}
+
+  @keyframes rotar
+  {
+  0% {transform: rotate(0deg);left:0px;}
+  25% {transform: rotate(20deg);left:0px;}
+  50% {transform: rotate(0deg);left:200px;}
+  55% {transform: rotate(0deg);left:200px;}
+  70% {transform: rotate(0deg);left:200px;}
+  100% {transform: rotate(-360deg);left:0px;} 
+  }
+
+.nav-container {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.main {
+    
+    margin-top: 64px;
+    margin-left: 10px;
+    overflow: hidden;
+
+
+}
+
+.footer {
+    background-color: rgb(236, 223, 204);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+}
+
