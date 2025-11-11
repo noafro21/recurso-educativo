@@ -1,70 +1,155 @@
-/*rgb(24, 28, 20)
-rgb(60, 61, 55)
-rgb(105, 117, 101)
-rgb(236, 223, 204)*/
+/*
+Paleta de colores definida en el código:
+rgb(24, 28, 20)      -> Oscuro principal
+rgb(60, 61, 55)      -> Oscuro secundario
+rgb(105, 117, 101)   -> Medio/Acento
+rgb(236, 223, 204)   -> Claro/Fondo
+*/
+
+* {
+    /* Selector universal: aplica el estilo a todos los elementos. */
+    box-sizing: border-box;
+    /* Modelo de caja: asegura que el padding y el borde se incluyan dentro
+    del ancho y alto total del elemento, facilitando el diseño.
+    */
+}
+
+/* Definición de variables CSS para la paleta de colores */
+:root {
+    /* Pseudo-clase que representa el elemento raíz (<html>). Ideal para definir variables globales. */
+    --color-dark-main: rgb(24, 28, 20);
+    /* Variable para el color oscuro principal (ej. texto principal). */
+    --color-dark-secondary: rgb(60, 61, 55);
+    /* Variable para el color oscuro secundario (ej. bordes o sombras). */
+    --color-accent: rgb(105, 117, 101);
+    /* Variable para el color de acento/medio (ej. fondo de cuerpo o encabezado). */
+    --color-light: rgb(236, 223, 204);
+    /* Variable para el color claro (ej. fondo de la navegación o footer). */
+    --color-white: #ffffff;
+    /* Variable para el color blanco puro. */
+}
 
 body {
-    background-color: rgb(105, 117, 101);
+    /* Estilos aplicados al cuerpo de la página. */
+    background-color: var(--color-accent);
+    /* Color de fondo del body, usando la variable de acento. */
+    color: var(--color-dark-main);
+    /* Color del texto predeterminado, usando la variable oscura principal. */
     font-family: "Noto Sans", serif;
+    /* Establece la fuente principal del texto. */
     font-optical-sizing: auto;
+    /* Propiedad avanzada para ajuste óptico de fuentes. */
     font-weight: 400;
+    /* Grosor normal de la fuente. */
     font-style: normal;
-    color: rgb(24, 28, 20);
-    
+    /* Estilo de la fuente (normal, no cursiva). */
 }
 
 .header {
-    background-color: rgb(236, 223, 204);
+    /* Estilos para el encabezado de la página. */
+    background-color: var(--color-accent);
+    /* Color de fondo del encabezado. */
     height: 70px;
-  
-  position: sticky;
-  top: 0;
-  
+    /* Altura fija del encabezado. */
+    position: sticky;
+    /* Posicionamiento fijo relativo. El elemento se comporta como 'relative' 
+    hasta que alcanza el umbral de desplazamiento.
+    */
+    top: 0;
+    /* El encabezado se detiene cuando toca la parte superior de la ventana de visualización (0px). */
+}
 
-
+.nav {
+    /* Estilos para el elemento de navegación (navbar) dentro del encabezado. */
+    background-color: var(--color-light);
+    /* Color de fondo de la barra de navegación, usando el color claro. */
 }
 
 .logo {
+    /* Estilos para la imagen del logo. */
     width: 110px;
+    /* Ancho fijo. */
     height: 65px;
-    position: absolute;
+    /* Alto fijo. */
     margin-top: 2px;
+    /* Margen superior. */
     margin-left: 3px;
+    /* Margen izquierdo. */
     border-radius: 10px;
+    /* Redondea las esquinas del logo. */
     animation: rotar 6s linear 2 alternate;
-}
-
-  @keyframes rotar
-  {
-  0% {transform: rotate(0deg);left:0px;}
-  25% {transform: rotate(20deg);left:0px;}
-  50% {transform: rotate(0deg);left:200px;}
-  55% {transform: rotate(0deg);left:200px;}
-  70% {transform: rotate(0deg);left:200px;}
-  100% {transform: rotate(-360deg);left:0px;} 
-  }
-
-.nav-container {
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    margin-top: 15px;
+    /* Aplica la animación 'rotar' por 6s, lineal, 2 veces, alternando dirección. */
 }
 
 .main {
-    
-    margin-top: 64px;
+    /* Estilos para el contenido principal de la página. */
+    padding: 20px;
+    /* Relleno interno alrededor del contenido. */
     margin-left: 10px;
-    overflow: hidden;
+    /* Margen a la izquierda. */
+}
 
+/* **DEFINICIÓN DE KEYFRAMES (ANIMACIÓN)** */
+@keyframes rotar {
+    /* Regla para definir los pasos de la animación llamada 'rotar'. */
+    0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    /* Estado inicial: sin rotación, posición izquierda 0. */
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+    /* A los 25%: rotado 20 grados. */
+    50% {
+        transform: rotate(0deg);
+        left: 200px;
+    }
+    /* A los 50%: rotación a 0, movido 200px a la derecha. */
+    55% {
+        transform: rotate(0deg);
+        left: 200px;
+    }
+    /* Pausa/Mantiene el estado en 55%. */
+    70% {
+        transform: rotate(0deg);
+        left: 200px;
+    }
+    /* Pausa/Mantiene el estado en 70%. */
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+    /* Estado final: rotación completa (-360 grados) y vuelve a posición izquierda 0. */
+}
 
+.aside {
+    /* Estilos para el contenido lateral/secundario. */
+    padding: 10px;
+      margin-top: 20px;
+      margin-left: 10px;
+       text-align: center;
+     font-size: 18px;
+       font-weight: bold;
+       border-radius: 8px;
+    
 }
 
 .footer {
-    background-color: rgb(236, 223, 204);
-    position: absolute;
+    /* Estilos para el pie de página. */
+    background-color: var(--color-light);
+    /* Color de fondo claro. */
     width: 100%;
+    /* Ocupa el 100% del ancho del contenedor. */
     text-align: center;
-
+    /* Texto centrado. */
+    position: absolute;
+    /* Posicionamiento absoluto: se posiciona con respecto a su ancestro posicionado
+    más cercano (o al <body>), quitándolo del flujo normal.
+    */
+    padding: auto;
+    /* Relleno automático. (Nota: 'auto' no es un valor común para padding). */
+    margin-top: 0;
+    /* Margen superior cero. */
 }
-
