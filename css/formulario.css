@@ -101,6 +101,10 @@ hr {
     margin-bottom: 5px;
 }
 
+.registro-formulario{
+    background-color: var(--color-light);
+}
+
 .header {
 
     height: 70px;

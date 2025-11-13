@@ -63,14 +63,13 @@
     <!-- Contenedor principal del contenido (Usando Bootstrap) -->
     <main class="container my-5">
 
-        <header class="text-center mb-5">
+        <div class="text-center mb-5">
             <h2 class="display-5 fw-bold custom-text-dark">Registro de Información Médica</h2>
             <p class="lead custom-text-secondary">Complete los campos requeridos para su expediente.</p>
-        </header>
+        </div>
 
         <!-- Formulario -->
-        <form id="registroFormulario" onsubmit="return validarFormulario(event)"
-            class="bg-white p-4 p-md-5 rounded-3 shadow-lg custom-form-border">
+        <form id="registroFormulario" class="registro-formulario p-4 p-md-5 rounded-3 shadow-lg custom-form-border">
 
             <!-- SECCIÓN 1: Información Personal -->
             <section class="mb-5 p-4 custom-section-1 rounded-3">
@@ -82,7 +81,7 @@
                     <!-- Nombre completo -->
                     <div class="col-md-6">
                         <label for="nombre_completo" class="form-label custom-text-dark-secondary">Nombre completo:
-                            <span class="text-danger">*</span></label>
+                        </label>
                         <input type="text" id="nombre_completo" name="nombre_completo"
                             placeholder="Su nombre y apellidos" required class="form-control custom-form-control">
                     </div>
@@ -90,7 +89,7 @@
                     <!-- Cédula, DIMEX o pasaporte -->
                     <div class="col-md-6">
                         <label for="identificacion" class="form-label custom-text-dark-secondary">Cédula, DIMEX o
-                            pasaporte: <span class="text-danger">*</span></label>
+                            pasaporte: </label>
                         <input type="text" id="identificacion" name="identificacion"
                             placeholder="Número de identificación" required class="form-control custom-form-control">
                     </div>
@@ -98,23 +97,21 @@
                     <!-- Fecha de nacimiento -->
                     <div class="col-md-6">
                         <label for="fecha_nacimiento" class="form-label custom-text-dark-secondary">Fecha de nacimiento:
-                            <span class="text-danger">*</span></label>
+                        </label>
                         <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required
                             class="form-control custom-form-control">
                     </div>
 
                     <!-- Correo electrónico -->
                     <div class="col-md-6">
-                        <label for="email" class="form-label custom-text-dark-secondary">Correo electrónico: <span
-                                class="text-danger">*</span></label>
+                        <label for="email" class="form-label custom-text-dark-secondary">Correo electrónico: </label>
                         <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required
                             class="form-control custom-form-control">
                     </div>
 
                     <!-- Teléfono -->
                     <div class="col-md-6">
-                        <label for="telefono" class="form-label custom-text-dark-secondary">Teléfono: <span
-                                class="text-danger">*</span></label>
+                        <label for="telefono" class="form-label custom-text-dark-secondary">Teléfono: </label>
                         <input type="tel" id="telefono" name="telefono" placeholder="Ej: 8888-8888" required
                             pattern="[0-9]{4}[ -]?[0-9]{4}" title="Formato: 8888-8888 o 88888888"
                             class="form-control custom-form-control">
@@ -123,7 +120,7 @@
                     <!-- ¿Cuenta con algún seguro privado? -->
                     <div class="col-md-6">
                         <label class="form-label d-block custom-text-dark-secondary">¿Cuenta con algún seguro privado?
-                            <span class="text-danger">*</span></label>
+                        </label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="seguro_si" name="seguro_privado" value="si"
                                 required>
@@ -256,7 +253,7 @@
                         </div>
                     </div>
 
-                    <!-- Medicamentos que toma (se mantiene como textarea) -->
+                    <!-- Medicamentos que toma-->
                     <div class="col-12">
                         <label for="medicamentos" class="form-label custom-text-dark-secondary">Medicamentos que
                             toma:</label>
@@ -265,7 +262,7 @@
                             class="form-control custom-form-control"></textarea>
                     </div>
 
-                    <!-- Alergia a medicamentos (se mantiene como textarea) -->
+                    <!-- Alergia a medicamentos -->
                     <div class="col-12">
                         <label for="alergias" class="form-label custom-text-dark-secondary">Alergia a
                             medicamentos:</label>
@@ -276,24 +273,14 @@
                 </div>
             </section>
 
-            <!-- Mensaje de Validación General -->
-            <div id="mensajeError" class="alert alert-danger text-center mb-4 d-none" role="alert">
-                Por favor, complete todos los campos obligatorios.
-            </div>
-
             <!-- Botones de Acción -->
             <div class="d-flex justify-content-center gap-3 pt-3">
                 <button type="submit"
                     class="btn custom-btn-submit custom-btn-accent text-white fw-semibold py-2 px-4 rounded-pill shadow-sm">
                     Enviar Expediente
                 </button>
-                <button type="reset" class="btn btn-outline-secondary py-2 px-4 rounded-pill">
-                    Limpiar
-                </button>
             </div>
-
         </form>
-
     </main>
 
     <footer class=" footer">
