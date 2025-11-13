@@ -101,15 +101,6 @@ hr {
     margin-bottom: 5px;
 }
 
-/* Estilo para el campo de especificación de 'Otras condiciones' */
-#otras_condiciones_field {
-    margin-top: 10px;
-    padding: 10px;
-    border-left: 3px solid var(--color-accent);
-    background-color: rgba(105, 117, 101, 0.05);
-    /* Un fondo muy ligero */
-}
-
 .header {
 
     height: 70px;
