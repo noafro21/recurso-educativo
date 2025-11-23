@@ -18,45 +18,55 @@
 </head>
 
 <body>
-    <!-- Menú e imagen del logo -->
-    <header class="header container-fluids">
-        <div class="row">
-            <div class="col-12 col-md-12 col-xl-12 bg-info">
-                <nav class=" nav navbar navbar-expand-lg ">
-                    <div class="col-6 col-md-3 col-xl-2 colorfondo">
+    <!-- Menú e imagen del logo (reorganizado para usar utilidades Bootstrap) -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img class="logo me-2" src="./assets/images/logo-endoscopia-educativa.png"
+                        title="Logo: Endoscopia Digestiva Educativa - Tu guía clara para entender la endoscopia"
+                        alt="Logo: Endoscopia Educativa - Tu guía clara para entender la endoscopia">
+                    <span class="d-none d-md-inline fs-5 text-dark">Endoscopia Educativa</span>
+                </a>
 
-                        <a href="index.html">
-                            <img class="logo" src="./assets/images/logo-endoscopia-educativa.png"
-                                title="Logo: Endoscopia Digestiva Educativa - Tu guía clara para entender la endoscopia"
-                                alt="Logo: Endoscopia Educativa - Tu guía clara para entender la endoscopia">
-                        </a>
-                    </div>
-                    <a class="navbar-brand" href="#"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Página
-                                    Principal</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./gallery.html">Imágenes y Videos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./formulario.html">Formulario</a>
-                            </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./gallery.html">Imágenes y Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./formulario.html">Formulario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                        </ul>
-                    </div>
-                </nav>
+    <!-- Hero / Jumbotron -->
+    <section class="hero container mt-4">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-7">
+                <h1 class="display-6">Endoscopia Digestiva: Guía Práctica y Educativa</h1>
+                <p class="lead">Recursos claros y actualizados para entender procedimientos, preparaciones y avances tecnológicos en endoscopia digestiva.</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="./formulario.html" role="button" aria-label="Ir al formulario de contacto">Contáctanos / Formulario</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-5 d-none d-md-block text-end">
+                <img src="./assets/images/gastroscopio.webp" alt="Imagen endoscopio" class="img-fluid rounded" style="max-height:170px; object-fit:cover;">
             </div>
         </div>
-    </header>
+    </section>
     <main class="main">
         <h1>Endoscopia Digestiva: Guía Práctica y Educativa</h1>
 
