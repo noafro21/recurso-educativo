@@ -1,20 +1,8 @@
-/*
-  styles.css
-  - Comentarios añadidos para entender cada sección.
-  - Se mantienen las decisiones de diseño base (paleta y estructura),
-    pero se corrigen comportamientos problemáticos (ej. animaciones que usan "left", padding inválido)
-    y se añade una animación suave y optimizada para el logo.
-
-  Paleta (variables) usada en el proyecto:
-  --color-dark-main: color de texto principal
-  --color-dark-secondary: color secundario para textos/bordes
-  --color-accent: color de acento/fondo principal
-  --color-light: color claro para fondos secundarios (nav/footer)
-*/
 
 /* Selector universal: evita sorpresas con el tamaño de caja */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 /* Variables globales de color y accesibilidad */
@@ -54,7 +42,8 @@ body {
 
 .nav {
     background-color: var(--color-light);
-    box-shadow: 0 1px 6px rgba(11,46,58,0.06);
+    -webkit-box-shadow: 0 1px 6px rgba(11,46,58,0.06);
+            box-shadow: 0 1px 6px rgba(11,46,58,0.06);
 }
 
 /* Logo
@@ -69,27 +58,37 @@ body {
     margin-left: 3px;
     border-radius: 8px;
     display: block;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     will-change: transform;
-    animation: logo-breathe 3s ease-in-out infinite;
+    -webkit-animation: logo-breathe 3s ease-in-out infinite;
+            animation: logo-breathe 3s ease-in-out infinite;
 }
 
 /* Animación suave y sencilla para dar dinamismo al logo:
    - ligera elevación (translateY), pequeña escala y rotación sutil
    - ciclos continuos y cortos para no distraer al usuario
 */
+@-webkit-keyframes logo-breathe {
+    0%   { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
+    25%  { -webkit-transform: translateY(-6px) scale(1.03) rotate(-3deg); transform: translateY(-6px) scale(1.03) rotate(-3deg); }
+    50%  { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
+    75%  { -webkit-transform: translateY(-4px) scale(1.02) rotate(3deg); transform: translateY(-4px) scale(1.02) rotate(3deg); }
+    100% { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
+}
 @keyframes logo-breathe {
-    0%   { transform: translateY(0) scale(1) rotate(0deg); }
-    25%  { transform: translateY(-6px) scale(1.03) rotate(-3deg); }
-    50%  { transform: translateY(0) scale(1) rotate(0deg); }
-    75%  { transform: translateY(-4px) scale(1.02) rotate(3deg); }
-    100% { transform: translateY(0) scale(1) rotate(0deg); }
+    0%   { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
+    25%  { -webkit-transform: translateY(-6px) scale(1.03) rotate(-3deg); transform: translateY(-6px) scale(1.03) rotate(-3deg); }
+    50%  { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
+    75%  { -webkit-transform: translateY(-4px) scale(1.02) rotate(3deg); transform: translateY(-4px) scale(1.02) rotate(3deg); }
+    100% { -webkit-transform: translateY(0) scale(1) rotate(0deg); transform: translateY(0) scale(1) rotate(0deg); }
 }
 
 /* Respetar preferencia de reducir animaciones */
 @media (prefers-reduced-motion: reduce) {
     .logo {
-        animation: none !important;
+        -webkit-animation: none !important;
+                animation: none !important;
         will-change: auto;
     }
 }
@@ -99,12 +98,15 @@ body {
     margin-left: 10px;
 }
 
+
+
 /* Hero / jumbotron sencillo usando variables */
 .hero {
     background-color: var(--color-white);
     border-radius: 8px;
     padding: 32px 16px;
-    box-shadow: 0 6px 18px rgba(11,46,58,0.04);
+    -webkit-box-shadow: 0 6px 18px rgba(11,46,58,0.04);
+            box-shadow: 0 6px 18px rgba(11,46,58,0.04);
     margin-bottom: 28px;
 }
 
@@ -140,13 +142,3 @@ body {
 @media (max-width: 576px) {
     .logo { width: 90px; height: 54px; }
 }
-
-/* ------------------------------------------------------------------
-   Notas / recomendaciones rápidas en código:
-   - Evitar animaciones que cambien 'left' o propiedades que afectan el flujo
-     del documento; usar 'transform' para mejor rendimiento.
-   - Evitar 'position: absolute' en footer salvo que se controle el flujo
-     (puede tapar contenido en pantallas pequeñas).
-   - Mantener Bootstrap para layout; usar utilidades (p-*, m-*, container) para
-     consistencia en lugar de muchas reglas personalizadas.
------------------------------------------------------------------- */
