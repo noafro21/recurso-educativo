@@ -1,16 +1,3 @@
-/*
-  styles.css
-  - Comentarios añadidos para entender cada sección.
-  - Se mantienen las decisiones de diseño base (paleta y estructura),
-    pero se corrigen comportamientos problemáticos (ej. animaciones que usan "left", padding inválido)
-    y se añade una animación suave y optimizada para el logo.
-
-  Paleta (variables) usada en el proyecto:
-  --color-dark-main: color de texto principal
-  --color-dark-secondary: color secundario para textos/bordes
-  --color-accent: color de acento/fondo principal
-  --color-light: color claro para fondos secundarios (nav/footer)
-*/
 
 /* Selector universal: evita sorpresas con el tamaño de caja */
 * {
@@ -99,6 +86,8 @@ body {
     margin-left: 10px;
 }
 
+
+
 /* Hero / jumbotron sencillo usando variables */
 .hero {
     background-color: var(--color-white);
@@ -140,13 +129,3 @@ body {
 @media (max-width: 576px) {
     .logo { width: 90px; height: 54px; }
 }
-
-/* ------------------------------------------------------------------
-   Notas / recomendaciones rápidas en código:
-   - Evitar animaciones que cambien 'left' o propiedades que afectan el flujo
-     del documento; usar 'transform' para mejor rendimiento.
-   - Evitar 'position: absolute' en footer salvo que se controle el flujo
-     (puede tapar contenido en pantallas pequeñas).
-   - Mantener Bootstrap para layout; usar utilidades (p-*, m-*, container) para
-     consistencia en lugar de muchas reglas personalizadas.
------------------------------------------------------------------- */
